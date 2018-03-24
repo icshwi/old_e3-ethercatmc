@@ -29,7 +29,7 @@ where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 include $(REQUIRE_TOOLS)/driver.makefile
 
-APP:=calcApp
+APP:=EthercatMCApp
 APPDB:=$(APP)/Db
 APPSRC:=$(APP)/src
 
@@ -52,3 +52,4 @@ SOURCES += $(APPSRC)/EthercatMCAxis.cpp
 SOURCES += $(APPSRC)/EthercatMCController.cpp 
 SOURCES += $(APPSRC)/EthercatMCHelper.cpp 
 
+DBD += $(APPSRC)/devEthercatMC.dbd
