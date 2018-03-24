@@ -27,7 +27,7 @@
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-include $(REQUIRE_TOOLS)/driver.makefile
+include $(E3_REQUIRE_TOOLS)/driver.makefile
 
 APP:=EthercatMCApp
 APPDB:=$(APP)/Db
@@ -53,3 +53,7 @@ SOURCES += $(APPSRC)/EthercatMCController.cpp
 SOURCES += $(APPSRC)/EthercatMCHelper.cpp 
 
 DBD += $(APPSRC)/devEthercatMC.dbd
+
+# db rule is the default in RULES_E3, so add the empty one
+
+db:
