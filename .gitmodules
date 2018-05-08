@@ -1,4 +1,4 @@
 [submodule "m-epics-ethercatmc"]
 	path = m-epics-ethercatmc
 	url = https://bitbucket.org/europeanspallationsource/m-epics-ethercatmc
-	ignore = all
+	ignore = dirty
