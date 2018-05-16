@@ -17,8 +17,8 @@
 # 
 # Author  : Jeong Han Lee
 # email   : han.lee@esss.se
-# Date    : Tuesday, May  8 15:07:43 CEST 2018
-# version : 0.0.1
+# Date    : Wednesday, May 16 15:29:23 CEST 2018
+# version : 0.0.2
 #
 
 
@@ -41,19 +41,10 @@ APPDB:=$(APP)/Db
 APPSRC:=$(APP)/src
 
 
-USR_INCLUDES += -I$(where_am_I)/$(APPSRC)
+USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
-# USR_CFLAGS   += -Wno-unused-variable
-# USR_CFLAGS   += -Wno-unused-function
-# USR_CFLAGS   += -Wno-unused-but-set-variable
-# USR_CPPFLAGS += -Wno-unused-variable
-# USR_CPPFLAGS += -Wno-unused-function
-# USR_CPPFLAGS += -Wno-unused-but-set-variable
 
-TEMPLATES += $(APPDB)/EthercatMC.template
-TEMPLATES += $(APPDB)/EthercatMCdebug.template
-TEMPLATES += $(APPDB)/EthercatMChome.template
-
+TEMPLATES += $(wildcard $(APPDB)/*.template)
 
 SOURCES += $(APPSRC)/EthercatMCAxis.cpp
 SOURCES += $(APPSRC)/EthercatMCController.cpp 
