@@ -18,7 +18,7 @@ MOTOR_DEP_VERSION:=6.9.4
 # In most case, we don't need to touch the following variables.
 #
 
-E3_MODULE_NAME:=$(EPICS_MODULE_NAME)
+E3_MODULE_NAME:=EthercatMC
 E3_MODULE_SRC_PATH:=m-epics-$(EPICS_MODULE_NAME)
 E3_MODULE_MAKEFILE:=$(EPICS_MODULE_NAME).Makefile
 

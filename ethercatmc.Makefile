@@ -50,7 +50,7 @@ SOURCES += $(APPSRC)/EthercatMCAxis.cpp
 SOURCES += $(APPSRC)/EthercatMCController.cpp 
 SOURCES += $(APPSRC)/EthercatMCHelper.cpp 
 
-DBD += $(APPSRC)/devEthercatMC.dbd
+DBDS += $(APPSRC)/EthercatMcSupport.dbd
 
 # db rule is the default in RULES_E3, so add the empty one
 
