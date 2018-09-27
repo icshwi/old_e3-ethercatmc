@@ -1,8 +1,14 @@
 #
-EPICS_MODULE_NAME:=ethercatmc
+EPICS_MODULE_NAME:=EthercatMC
 EPICS_MODULE_TAG:=master
 #
-E3_MODULE_VERSION:=develop
+E3_MODULE_VERSION:=working
+
+# DEPENDENT MODULE VERSION
+# Example,
+ASYN_DEP_VERSION:=4.33.0
+MOTOR_DEP_VERSION:=6.9.5
+
 
 # ONLY IF this module has the sequencer dependency. However,
 # in most case, we don't need to enable the following line,
@@ -14,10 +20,10 @@ E3_MODULE_VERSION:=develop
 #
 E3_MODULE_NAME:=$(EPICS_MODULE_NAME)
 E3_MODULE_SRC_PATH:=$(EPICS_MODULE_NAME)-dev
-E3_MODULE_MAKEFILE:=$(EPICS_MODULE_NAME).Makefile
+E3_MODULE_MAKEFILE:=ethercatmc.Makefile
 
 #export DEV_GIT_URL:="https://where your git repo"
-E3_MODULE_DEV_GITURL:="https://github.com/epics-modules/ethercatmc"
+E3_MODULE_DEV_GITURL:="https://bitbucket.org/europeanspallationsource/m-epics-EthercatMC"
 
 # The definitions shown below can also be placed in an untracked CONFIG_MODULE_DEV.local
 -include $(TOP)/configure/CONFIG_MODULE_DEV.local
