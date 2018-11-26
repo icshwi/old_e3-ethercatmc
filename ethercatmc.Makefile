@@ -44,6 +44,7 @@ APPSRC:=$(APP)/src
 
 USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
+EXCLUDE_ARCHS += linux-ppc64e6500
 
 TEMPLATES += $(wildcard $(APPDB)/*.template)
 
