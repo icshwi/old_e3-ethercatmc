@@ -1,5 +1,6 @@
 #
-#  Copyright (c) 2017 - Present  European Spallation Source ERIC
+#  Copyright (c) 2019            Jeong Han Lee
+#  Copyright (c) 2017 - 2019     European Spallation Source ERIC
 #
 #  The program is free software: you can redistribute
 #  it and/or modify it under the terms of the GNU General Public License
@@ -17,10 +18,9 @@
 # 
 # Author  : Jeong Han Lee
 # email   : han.lee@esss.se
-# Date    : Thursday, September 13 19:14:28 CEST 2018
-# version : 0.0.3
+# Date    : Thursday, March 28 23:26:04 CET 2019
+# version : 0.0.4
 #
-
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
@@ -36,7 +36,6 @@ motor_VERSION=$(MOTOR_DEP_VERSION)
 endif
 
 
-
 APP:=EthercatMCApp
 APPDB:=$(APP)/Db
 APPSRC:=$(APP)/src
@@ -44,7 +43,6 @@ APPSRC:=$(APP)/src
 
 USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
-EXCLUDE_ARCHS += linux-ppc64e6500
 
 TEMPLATES += $(wildcard $(APPDB)/*.template)
 
@@ -58,6 +56,6 @@ DBDS += $(APPSRC)/EthercatMcSupport.dbd
 
 db:
 #
-.PHONY: vlibs
+.PHONY: vlibs db
 vlibs:
 #
